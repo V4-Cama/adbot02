@@ -662,9 +662,9 @@ async def LadderFunc(number, ladderlist, channelVal):
 	lose_member = [item for item in ladderlist if item not in result_ladder]
 	result_ladderSTR = ','.join(map(str, result_ladder))
 	embed = discord.Embed(title  = "🎲 최첨단 조편성 시스템",color=0x00ff00)
-	embed.add_field(name = "👥 참가자", value =  f"```fix\n{', '.join(ladderlist)}```", inline=False)
-	embed.add_field(name = ":regional_indicator_a: 그룹", value =  f"```fix\n{', '.join(result_ladder)}```")
-	embed.add_field(name = ":regional_indicator_b: 그룹", value =  f"```{', '.join(lose_member)}```")
+	embed.add_field(name = "👥 참가자", value =  f"```fix\n{' '.join(ladderlist)}```", inline=False)
+	embed.add_field(name = ":regional_indicator_a: 그룹", value =  f"```fix\n{' '.join(result_ladder)}```")
+	embed.add_field(name = ":regional_indicator_b: 그룹", value =  f"```{' '.join(lose_member)}```")
 	await channelVal.send(embed=embed, tts=False)
 
 #data초기화
@@ -1823,9 +1823,9 @@ class mainCog(commands.Cog):
 				color=0x00ff00
 				)
 			embed.description = f"||```{input_data}\n{''.join(ladder_data)}{' '.join(output_list)}```||"
-			embed.add_field(name = "👥 참가자", value =  f"```fix\n{', '.join(join_member)}```", inline=False)
-			embed.add_field(name = ":regional_indicator_a:  그룹", value =  f"```fix\n{', '.join(win_member)}```")
-			embed.add_field(name = ":regional_indicator_b: 그룹", value =  f"```{', '.join(lose_member)}```")
+			embed.add_field(name = "👥 참가자", value =  f"```fix\n{' '.join(join_member)}```", inline=False)
+			embed.add_field(name = ":regional_indicator_a:  그룹", value =  f"```fix\n{' '.join(win_member)}```")
+			embed.add_field(name = ":regional_indicator_b: 그룹", value =  f"```{' '.join(lose_member)}```")
 			return await ctx.send(embed = embed)
 		else:
 			return
