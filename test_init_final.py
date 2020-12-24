@@ -660,7 +660,7 @@ async def FixedBossDateSave():
 async def LadderFunc(number, ladderlist, channelVal):
 	result_ladder = random.sample(ladderlist, number)
 	lose_member = [item for item in ladderlist if item not in result_ladder]
-	result_ladderSTR = ','.join(map(str, result_ladder))
+	result_ladderSTR = ' '.join(map(str, result_ladder))
 	embed = discord.Embed(title  = "🎲 최첨단 조편성 시스템",color=0x00ff00)
 	embed.add_field(name = "👥 참가자", value =  f"```fix\n{' '.join(ladderlist)}```", inline=False)
 	embed.add_field(name = ":regional_indicator_a: 그룹", value =  f"```fix\n{' '.join(result_ladder)}```")
